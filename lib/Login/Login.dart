@@ -8,6 +8,9 @@ class Login extends StatefulWidget {
   State<Login> createState() => _LoginState();
 }
 
+TextEditingController username = TextEditingController();
+TextEditingController password = TextEditingController();
+
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
@@ -29,9 +32,20 @@ class _LoginState extends State<Login> {
           SizedBox(height: 10),
           Expanded(
               flex: 3,
-              child: InputLogin(
-                title: "username",
-                hintText: "Enter your username",
+              child: Column(
+                children: [
+                  const SizedBox(height: 20),
+                  InputLogin(
+                    controller: username,
+                    title: "Username :",
+                    hintText: "Enter your username",
+                  ),
+                  InputLogin(
+                    controller: password,
+                    title: "Password :",
+                    hintText: "Enter your password",
+                  ),
+                ],
               )),
         ],
       ),

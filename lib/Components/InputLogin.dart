@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
-class InputLogin extends StatelessWidget {
-  const InputLogin({ required this.title, required this.hintText}) ;
+import '../AppTextStyles/AppTextStyles.dart';
 
+class InputLogin extends StatelessWidget {
+  const InputLogin({ required this.title, required this.hintText, required this.controller}) ;
+
+  final TextEditingController controller;
   final String title;
   final String hintText;
 
@@ -11,10 +14,10 @@ class InputLogin extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.fromLTRB(20, 20, 40, 10),
+          padding: const EdgeInsets.fromLTRB(20, 5, 20, 10),
           child: Row(
             children: [
-              Text(title),
+              Text(title, style: textStyle16400Black),
               SizedBox(width: 10),
               Expanded(
                 child: Container(
@@ -29,6 +32,7 @@ class InputLogin extends StatelessWidget {
                             offset: Offset(0, 3))
                       ]),
                   child: TextField(
+                    controller: controller,
                     decoration: InputDecoration(
                         border: InputBorder.none,
                         contentPadding: EdgeInsets.only(left: 15),
