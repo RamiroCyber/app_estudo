@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../AppTextStyles/AppTextStyles.dart';
+import '../Core/AppTextStyles.dart';
 
 class InputLogin extends StatelessWidget {
   const InputLogin({ required this.title, required this.hintText, required this.controller}) ;
@@ -29,11 +28,12 @@ class InputLogin extends StatelessWidget {
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 2,
                             blurRadius: 5,
-                            offset: Offset(0, 3))
+                            offset: Offset(0, 7))
                       ]),
                   child: TextField(
                     controller: controller,
                     decoration: InputDecoration(
+                      hintStyle: const TextStyle(color: Colors.grey),
                         border: InputBorder.none,
                         contentPadding: EdgeInsets.only(left: 15),
                         hintText: hintText),

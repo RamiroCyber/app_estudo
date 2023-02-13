@@ -1,3 +1,4 @@
+import 'package:app_estudo/Components/BtnLogin.dart';
 import 'package:app_estudo/Components/InputLogin.dart';
 import 'package:flutter/material.dart';
 
@@ -45,6 +46,9 @@ class _LoginState extends State<Login> {
                     title: "Password :",
                     hintText: "Enter your password",
                   ),
+                  const SizedBox(height: 20),
+                  BtnLogin(title: "Login",function: (){
+                  },)
                 ],
               )),
         ],
