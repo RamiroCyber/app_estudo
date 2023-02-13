@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.tealAccent,
+      color: Colors.tealAccent ,
       child: Container(child: const Icon(Icons.monetization_on_outlined)),
     );
   }

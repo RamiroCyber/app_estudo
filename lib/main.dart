@@ -16,16 +16,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        "/":(context) => const SplashScreen(),
-        "/login":(context) => const Login(),
-        // "register":(context) => Register(),
+        "/": (context) => const SplashScreen(),
+        "/login": (context) => const Login(),
+        "/register": (context) => Register(),
       },
       title: 'Flutter',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-
     );
   }
 }
-

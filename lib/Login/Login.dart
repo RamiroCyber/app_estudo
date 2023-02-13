@@ -1,5 +1,6 @@
 import 'package:app_estudo/Components/BtnLogin.dart';
 import 'package:app_estudo/Components/InputLogin.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -46,9 +47,26 @@ class _LoginState extends State<Login> {
                     title: "Password :",
                     hintText: "Enter your password",
                   ),
+                  const SizedBox(height: 80),
+                  BtnLogin(title: "Login", function: () {}),
                   const SizedBox(height: 20),
-                  BtnLogin(title: "Login",function: (){
-                  },)
+                  RichText(
+                    text: TextSpan(children: [
+                      TextSpan(
+                          text: "Don't have an account ? ",
+                          style:
+                              TextStyle(fontSize: 15, color: Colors.grey[850])),
+                      TextSpan(
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.of(context)
+                                  .pushReplacementNamed("/register");
+                            },
+                          text: "Register Now",
+                          style: TextStyle(
+                              fontSize: 14, color: Colors.orangeAccent[700])),
+                    ]),
+                  ),
                 ],
               )),
         ],

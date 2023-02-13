@@ -18,7 +18,7 @@ class BtnLogin extends StatelessWidget {
       onTap: function,
       child: Container(
         height: 50,
-        width: 200,
+        width: 250,
         decoration: const BoxDecoration(
             color: Colors.tealAccent,
             borderRadius: BorderRadius.only(
