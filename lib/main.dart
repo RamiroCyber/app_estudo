@@ -2,6 +2,7 @@ import 'package:app_estudo/splash/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'Login/Login.dart';
+import 'Login/Register.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => const SplashScreen(),
         "/login": (context) => const Login(),
-        "/register": (context) => Register(),
+        "/register": (context) => const Register(),
       },
       title: 'Flutter',
       theme: ThemeData(
