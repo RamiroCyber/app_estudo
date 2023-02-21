@@ -16,14 +16,20 @@ class _RegisterState extends State<Register> {
           Expanded(
             flex: 1,
             child: Container(
-              color: Colors.tealAccent,
+              decoration: BoxDecoration(
+                color: Colors.tealAccent,
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.elliptical(80, 80),
+                ),
+              ),
               child: Column(children: [
                 Image.asset('imagem aqui'),
-                SizedBox(height: 20),
-                Text('Register',style: ,)
+                const SizedBox(height: 20),
+                const Text('Register', style: TextStyle(fontSize: 35))
               ]),
             ),
-          )
+          ),
+          SizedBox(height: 30)
         ]),
       ),
     );
