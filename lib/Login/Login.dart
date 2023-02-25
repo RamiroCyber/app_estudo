@@ -2,6 +2,7 @@ import 'package:app_estudo/Components/BtnLogin.dart';
 import 'package:app_estudo/Components/InputLogin.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -16,6 +17,7 @@ TextEditingController password = TextEditingController();
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size.height;
     return SafeArea(
         child: Scaffold(
       body: Column(
@@ -23,17 +25,20 @@ class _LoginState extends State<Login> {
           Expanded(
             flex: 1,
             child: Container(
+              height: size * 0.3,
               decoration: const BoxDecoration(
                   color: Colors.tealAccent,
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.elliptical(80, 80))),
               width: double.infinity,
-              child: Icon(Icons.email_outlined),
+              child: Transform.scale(
+                scale: 0.5,
+                child: SvgPicture.asset('assets/cash.svg')),
             ),
           ),
           SizedBox(height: 10),
           Expanded(
-              flex: 3,
+              flex: 2,
               child: Column(
                 children: [
                   const SizedBox(height: 20),
@@ -60,7 +65,7 @@ class _LoginState extends State<Login> {
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               Navigator.of(context)
-                                  .pushReplacementNamed("/register");
+                                  .pushNamed("/register");
                             },
                           text: "Register Now",
                           style: TextStyle(

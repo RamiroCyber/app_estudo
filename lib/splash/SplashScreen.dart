@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -24,7 +25,9 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.tealAccent ,
-      child: const Icon(Icons.monetization_on_outlined),
+      child: Transform.scale(
+        scale: 0.5,
+          child: SvgPicture.asset('assets/cash.svg')),
     );
   }
 }
