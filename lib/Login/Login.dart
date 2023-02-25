@@ -1,7 +1,10 @@
+import 'package:app_estudo/Components/BtnExit.dart';
 import 'package:app_estudo/Components/BtnLogin.dart';
 import 'package:app_estudo/Components/InputLogin.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
 import 'package:flutter_svg/svg.dart';
 
 class Login extends StatefulWidget {
@@ -75,6 +78,8 @@ class _LoginState extends State<Login> {
           ),
         ],
       ),
-    ));
+          bottomNavigationBar: BtnExit(title: "Sair",function:  () => SystemNavigator.pop()),
+    ),
+    );
   }
 }
