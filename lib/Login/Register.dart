@@ -11,14 +11,11 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
-
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController confirmPassword = TextEditingController();
   TextEditingController location = TextEditingController();
   TextEditingController identificationNumber = TextEditingController();
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -38,11 +35,10 @@ class _RegisterState extends State<Register> {
                 ),
               ),
               child: Column(children: [
-                 Expanded(
-                   child: Transform.scale(
-                      scale: 0.5,
-                      child: SvgPicture.asset('assets/cash.svg')),
-                 ),
+                Expanded(
+                  child: Transform.scale(
+                      scale: 0.5, child: SvgPicture.asset('assets/cash.svg')),
+                ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 10),
                   child: const Text('Register', style: TextStyle(fontSize: 35)),
@@ -90,7 +86,6 @@ class _RegisterState extends State<Register> {
             child: const BackButton(),
           ),
         ]),
-
       ),
     );
   }

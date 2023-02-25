@@ -17,17 +17,16 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   duration() {
-    return Timer(
-        const Duration(seconds: 3), (() => Navigator.of(context).pushReplacementNamed('/login')));
+    return Timer(const Duration(seconds: 3),
+        (() => Navigator.of(context).pushReplacementNamed('/login')));
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.tealAccent ,
+      color: Colors.tealAccent,
       child: Transform.scale(
-        scale: 0.5,
-          child: SvgPicture.asset('assets/cash.svg')),
+          scale: 0.5, child: SvgPicture.asset('assets/cash.svg')),
     );
   }
 }

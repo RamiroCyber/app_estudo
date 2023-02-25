@@ -32,48 +32,47 @@ class _LoginState extends State<Login> {
                       bottomRight: Radius.elliptical(80, 80))),
               width: double.infinity,
               child: Transform.scale(
-                scale: 0.5,
-                child: SvgPicture.asset('assets/cash.svg')),
+                  scale: 0.5, child: SvgPicture.asset('assets/cash.svg')),
             ),
           ),
           SizedBox(height: 10),
           Expanded(
-              flex: 2,
-              child: Column(
-                children: [
-                  const SizedBox(height: 20),
-                  InputLogin(
-                    controller: username,
-                    title: "Username :",
-                    hintText: "Enter your username",
-                  ),
-                  InputLogin(
-                    controller: password,
-                    title: "Password :",
-                    hintText: "Enter your password",
-                  ),
-                  const SizedBox(height: 80),
-                  BtnLogin(title: "Login", function: () {}),
-                  const SizedBox(height: 20),
-                  RichText(
-                    text: TextSpan(children: [
-                      TextSpan(
-                          text: "Don't have an account ? ",
-                          style:
-                              TextStyle(fontSize: 15, color: Colors.grey[850])),
-                      TextSpan(
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              Navigator.of(context)
-                                  .pushNamed("/register");
-                            },
-                          text: "Register Now",
-                          style: TextStyle(
-                              fontSize: 14, color: Colors.orangeAccent[700])),
-                    ]),
-                  ),
-                ],
-              )),
+            flex: 2,
+            child: Column(
+              children: [
+                const SizedBox(height: 20),
+                InputLogin(
+                  controller: username,
+                  title: "Username :",
+                  hintText: "Enter your username",
+                ),
+                InputLogin(
+                  controller: password,
+                  title: "Password :",
+                  hintText: "Enter your password",
+                ),
+                const SizedBox(height: 80),
+                BtnLogin(title: "Login", function: () {}),
+                const SizedBox(height: 20),
+                RichText(
+                  text: TextSpan(children: [
+                    TextSpan(
+                        text: "Don't have an account ? ",
+                        style:
+                            TextStyle(fontSize: 15, color: Colors.grey[850])),
+                    TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Navigator.of(context).pushNamed("/register");
+                          },
+                        text: "Register Now",
+                        style: TextStyle(
+                            fontSize: 14, color: Colors.orangeAccent[700])),
+                  ]),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     ));
